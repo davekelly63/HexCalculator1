@@ -2,6 +2,7 @@
 using Android.Widget;
 using Android.OS;
 using Android.Views;
+using Android.Graphics;
 
 namespace HexCalculator1
 {
@@ -16,6 +17,9 @@ namespace HexCalculator1
    {
       TextView txtDec = null;
       TextView txtHex = null;
+
+      Button btnDec = null;
+      Button btnHex = null;
 
       EntryMode currentmode = EntryMode.Decimal;
 
@@ -65,9 +69,9 @@ namespace HexCalculator1
          Button btnF = FindViewById<Button> (Resource.Id.buttonF);
          btnF.Click += HexButtonOnClick;
 
-         Button btnDec = FindViewById<Button> (Resource.Id.buttonDec);
+         btnDec = FindViewById<Button> (Resource.Id.buttonDec);
          btnDec.Click += ChangeModeOnClick;
-         Button btnHex = FindViewById<Button> (Resource.Id.buttonHex);
+         btnHex = FindViewById<Button> (Resource.Id.buttonHex);
          btnHex.Click += ChangeModeOnClick;
 
          txtDec = FindViewById<TextView> (Resource.Id.textViewDec);
@@ -75,6 +79,8 @@ namespace HexCalculator1
 
          txtDec.Text = "0";
          txtHex.Text = "0";
+
+         btnDec.SetBackgroundColor (Color.Yellow);
       }
 
       private void ChangeModeOnClick (object sender, System.EventArgs e)
@@ -84,13 +90,17 @@ namespace HexCalculator1
 
          // Change the mode
 
-         if (pressed == "DEC")
+         if (pressed.ToUpperInvariant() == "DEC")
          {
-            currentmode = EntryMode.Hex;
+            currentmode = EntryMode.Decimal;
+            btnDec.SetBackgroundColor (Color.Yellow);
+            btnHex.SetBackgroundColor (Color.Black);
          }
          else
          {
-            currentmode = EntryMode.Decimal;
+            currentmode = EntryMode.Hex;
+            btnDec.SetBackgroundColor (Color.Black);
+            btnHex.SetBackgroundColor (Color.Yellow);
          }
       }
 
@@ -103,7 +113,7 @@ namespace HexCalculator1
          {
             // Only accept 0-9
 
-            if ("0123456789".Contains(pressed))
+            if ("0123456789".Contains (pressed))
             {
                txtDec.Text += pressed;
                txtHex.Text = HexConverter.ConvertDecToHex (txtDec.Text);
