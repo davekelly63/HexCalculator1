@@ -5,50 +5,82 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-    <TableLayout
-        android:minWidth="25px"
-        android:minHeight="200px"
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tableLayout1">
-        <TableRow
-            android:id="@+id/tableRow1">
-            <TextView
-                android:text="DEC"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_column="0"
-                android:id="@+id/textView10" />
-            <TextView
-                android:text="          "
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_column="1"
-                android:id="@+id/textView17" />
-            <TextView
-                android:text="Large Text"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_column="2"
-                android:id="@+id/textViewDecValue" />
-        </TableRow>
-        <TableRow
-            android:id="@+id/tableRow2">
-            <TextView
-                android:text="HEX"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_column="0"
-                android:id="@+id/textView14" />
-            <TextView
-                android:text="          "
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_column="1"
-                android:id="@+id/textView18" />
-            <TextView
-                android:text="Large Text"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_column="2"
-                android:id="@+id/textViewHexValue" />
-        </TableRow>
-        <TableRow
-            android:id="@+id/tableRow3">
-        </TableRow>
-    </TableLayout>
+        android:id="@+id/gridLayout1"
+        android:columnCount="5"
+        android:rowCount="6">
+        <TextView
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textViewDec"
+            android:layout_columnSpan="5"
+            android:textAlignment="textEnd" />
+        <TextView
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textViewHex"
+            android:layout_columnSpan="5" />
+        <Button
+            android:text="C"
+            android:id="@+id/buttonC"/>
+        <Button
+            android:text="D"
+            android:id="@+id/buttonD" />
+        <Button
+            android:text="E"
+            android:id="@+id/buttonE"/>
+        <Button
+            android:text="F"
+            android:id="@+id/buttonF" />
+        <Button
+            android:text="Dec"
+            android:id="@+id/buttonDec"/>
+        <Button
+            android:text="8"
+            android:id="@+id/button8"/>
+        <Button
+            android:text="9"
+            android:id="@+id/button9"/>
+        <Button
+            android:text="A"
+            android:id="@+id/buttonA"/>
+        <Button
+            android:text="B"
+            android:id="@+id/buttonB"/>
+        <Button
+            android:text="Hex"
+            android:id="@+id/buttonHex" />
+        <Button
+            android:text="4"
+            android:id="@+id/button4"/>
+        <Button
+            android:text="5"
+            android:id="@+id/button5" />
+        <Button
+            android:text="6"
+            android:id="@+id/button6" />
+        <Button
+            android:text="7"
+            android:id="@+id/button7" />
+        <Button
+            android:text="AND"
+            android:id="@+id/buttonAnd"/>
+        <Button
+            android:text="0"
+            android:id="@+id/button0"/>
+        <Button
+            android:text="1"
+            android:id="@+id/button1" />
+        <Button
+            android:text="2"
+            android:id="@+id/button2"/>
+        <Button
+            android:text="3"
+            android:id="@+id/button3" />
+        <Button
+            android:text="OR"
+            android:id="@+id/buttonOr"/>
+    </GridLayout>
 </LinearLayout>

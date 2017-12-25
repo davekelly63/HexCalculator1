@@ -16,11 +16,18 @@ namespace HexCalculator1
    {
       public static string ConvertDecToHex (string input)
       {
-         int value = 0;
+         UInt64 value = 0;
 
-         int.TryParse (input, out value);
+         UInt64.TryParse (input, out value);
 
          return value.ToString ("X");
+      }
+
+      public static string ConvertHexToDec (string input)
+      {
+         Int64 value = Convert.ToInt64 (input, 16);
+
+         return value.ToString ();
       }
    }
 }
