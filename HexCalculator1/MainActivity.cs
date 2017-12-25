@@ -23,6 +23,8 @@ namespace HexCalculator1
 
       EntryMode currentmode = EntryMode.Decimal;
 
+      Color defaultBackColor = Color.Black;
+
       protected override void OnCreate (Bundle savedInstanceState)
       {
          base.OnCreate (savedInstanceState);
@@ -74,6 +76,12 @@ namespace HexCalculator1
          btnHex = FindViewById<Button> (Resource.Id.buttonHex);
          btnHex.Click += ChangeModeOnClick;
 
+         Button btnAC = FindViewById<Button> (Resource.Id.buttonAllClear);
+         btnAC.Click += BtnAC_Click;
+
+         Button btnDel = FindViewById<Button> (Resource.Id.buttonDel);
+         btnDel.Click += BtnDel_Click;
+
          txtDec = FindViewById<TextView> (Resource.Id.textViewDec);
          txtHex = FindViewById<TextView> (Resource.Id.textViewHex);
 
@@ -81,6 +89,28 @@ namespace HexCalculator1
          txtHex.Text = "0";
 
          btnDec.SetBackgroundColor (Color.Yellow);
+
+         defaultBackColor = btnHex.DrawingCacheBackgroundColor;
+      }
+
+      private void BtnDel_Click (object sender, System.EventArgs e)
+      {
+         if (currentmode == EntryMode.Decimal)
+         {
+            txtDec.Text = txtDec.Text.Remove (txtDec.Text.Length - 1);
+            txtHex.Text = HexConverter.ConvertDecToHex (txtDec.Text);
+         }
+         else
+         {
+            txtHex.Text = txtHex.Text.Remove (txtHex.Text.Length - 1);
+            txtDec.Text = HexConverter.ConvertHexToDec (txtHex.Text);
+         }
+      }
+
+      private void BtnAC_Click (object sender, System.EventArgs e)
+      {
+         txtDec.Text = "0";
+         txtHex.Text = "0";
       }
 
       private void ChangeModeOnClick (object sender, System.EventArgs e)
@@ -90,16 +120,16 @@ namespace HexCalculator1
 
          // Change the mode
 
-         if (pressed.ToUpperInvariant() == "DEC")
+         if (pressed.ToUpperInvariant () == "DEC")
          {
             currentmode = EntryMode.Decimal;
             btnDec.SetBackgroundColor (Color.Yellow);
-            btnHex.SetBackgroundColor (Color.Black);
+            btnHex.SetBackgroundColor (defaultBackColor);
          }
          else
          {
             currentmode = EntryMode.Hex;
-            btnDec.SetBackgroundColor (Color.Black);
+            btnDec.SetBackgroundColor (defaultBackColor);
             btnHex.SetBackgroundColor (Color.Yellow);
          }
       }

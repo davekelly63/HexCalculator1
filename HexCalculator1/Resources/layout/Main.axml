@@ -10,7 +10,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/gridLayout1"
         android:columnCount="5"
-        android:rowCount="6">
+        android:rowCount="7">
+        <TextView
+            android:text="DKSS Hex Calculator"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textViewTitle"
+            android:layout_columnSpan="5"
+            android:textAlignment="textEnd" />
         <TextView
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -23,38 +29,53 @@
             android:id="@+id/textViewHex"
             android:layout_columnSpan="5" />
         <Button
+            android:text="AC"
+            android:id="@+id/buttonAllClear" />
+        <Button
+            android:text="Del"
+            android:id="@+id/buttonDel" />
+        <Button
+            android:text=""
+            android:id="@+id/button01" />
+        <Button
+            android:text=""
+            android:id="@+id/button02" />
+        <Button
+            android:text="Dec"
+            android:id="@+id/buttonDec" />
+        <Button
             android:text="C"
-            android:id="@+id/buttonC"/>
+            android:id="@+id/buttonC" />
         <Button
             android:text="D"
             android:id="@+id/buttonD" />
         <Button
             android:text="E"
-            android:id="@+id/buttonE"/>
+            android:id="@+id/buttonE" />
         <Button
             android:text="F"
             android:id="@+id/buttonF" />
         <Button
-            android:text="Dec"
-            android:id="@+id/buttonDec"/>
-        <Button
-            android:text="8"
-            android:id="@+id/button8"/>
-        <Button
-            android:text="9"
-            android:id="@+id/button9"/>
-        <Button
-            android:text="A"
-            android:id="@+id/buttonA"/>
-        <Button
-            android:text="B"
-            android:id="@+id/buttonB"/>
-        <Button
             android:text="Hex"
             android:id="@+id/buttonHex" />
         <Button
+            android:text="8"
+            android:id="@+id/button8" />
+        <Button
+            android:text="9"
+            android:id="@+id/button9" />
+        <Button
+            android:text="A"
+            android:id="@+id/buttonA" />
+        <Button
+            android:text="B"
+            android:id="@+id/buttonB" />
+        <Button
+            android:text="AND"
+            android:id="@+id/buttonAnd" />
+        <Button
             android:text="4"
-            android:id="@+id/button4"/>
+            android:id="@+id/button4" />
         <Button
             android:text="5"
             android:id="@+id/button5" />
@@ -65,22 +86,19 @@
             android:text="7"
             android:id="@+id/button7" />
         <Button
-            android:text="AND"
-            android:id="@+id/buttonAnd"/>
+            android:text="OR"
+            android:id="@+id/buttonOr" />
         <Button
             android:text="0"
-            android:id="@+id/button0"/>
+            android:id="@+id/button0" />
         <Button
             android:text="1"
             android:id="@+id/button1" />
         <Button
             android:text="2"
-            android:id="@+id/button2"/>
+            android:id="@+id/button2" />
         <Button
             android:text="3"
             android:id="@+id/button3" />
-        <Button
-            android:text="OR"
-            android:id="@+id/buttonOr"/>
     </GridLayout>
 </LinearLayout>
