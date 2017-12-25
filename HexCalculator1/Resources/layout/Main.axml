@@ -30,75 +30,112 @@
             android:layout_columnSpan="5" />
         <Button
             android:text="AC"
-            android:id="@+id/buttonAllClear" />
+            android:id="@+id/buttonAllClear"
+            android:background="#FFFF8C00"
+            android:textColor="#FF000000" />
         <Button
             android:text="Del"
-            android:id="@+id/buttonDel" />
+            android:id="@+id/buttonDel"
+            android:background="#FF808080" />
         <Button
             android:text=""
-            android:id="@+id/button01" />
+            android:id="@+id/button01"
+            android:visibility="invisible" />
         <Button
             android:text=""
-            android:id="@+id/button02" />
+            android:id="@+id/button02"
+            android:visibility="invisible" />
         <Button
             android:text="Dec"
             android:id="@+id/buttonDec" />
         <Button
             android:text="C"
-            android:id="@+id/buttonC" />
+            android:id="@+id/buttonC"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="D"
-            android:id="@+id/buttonD" />
+            android:id="@+id/buttonD"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="E"
-            android:id="@+id/buttonE" />
+            android:id="@+id/buttonE"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="F"
-            android:id="@+id/buttonF" />
+            android:id="@+id/buttonF"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="Hex"
             android:id="@+id/buttonHex" />
         <Button
             android:text="8"
-            android:id="@+id/button8" />
+            android:id="@+id/button8"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="9"
-            android:id="@+id/button9" />
+            android:id="@+id/button9"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="A"
-            android:id="@+id/buttonA" />
+            android:id="@+id/buttonA"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="B"
-            android:id="@+id/buttonB" />
+            android:id="@+id/buttonB"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="AND"
             android:id="@+id/buttonAnd" />
         <Button
             android:text="4"
-            android:id="@+id/button4" />
+            android:id="@+id/button4"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="5"
-            android:id="@+id/button5" />
+            android:id="@+id/button5"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="6"
-            android:id="@+id/button6" />
+            android:id="@+id/button6"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="7"
-            android:id="@+id/button7" />
+            android:id="@+id/button7"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="OR"
             android:id="@+id/buttonOr" />
         <Button
             android:text="0"
-            android:id="@+id/button0" />
+            android:id="@+id/button0"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="1"
-            android:id="@+id/button1" />
+            android:id="@+id/button1"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="2"
-            android:id="@+id/button2" />
+            android:id="@+id/button2"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
         <Button
             android:text="3"
-            android:id="@+id/button3" />
+            android:id="@+id/button3"
+            android:textColor="#FF000000"
+            android:background="#FFFFFFFF" />
     </GridLayout>
 </LinearLayout>

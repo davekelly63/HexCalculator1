@@ -89,6 +89,9 @@ namespace HexCalculator1
          txtHex.Text = "0";
 
          btnDec.SetBackgroundColor (Color.Yellow);
+         btnDec.SetTextColor (Color.Black);
+         btnHex.SetBackgroundColor (defaultBackColor);
+         btnHex.SetTextColor (Color.White);
 
          defaultBackColor = btnHex.DrawingCacheBackgroundColor;
       }
@@ -124,13 +127,17 @@ namespace HexCalculator1
          {
             currentmode = EntryMode.Decimal;
             btnDec.SetBackgroundColor (Color.Yellow);
+            btnDec.SetTextColor (Color.Black);
             btnHex.SetBackgroundColor (defaultBackColor);
+            btnHex.SetTextColor (Color.White);
          }
          else
          {
             currentmode = EntryMode.Hex;
             btnDec.SetBackgroundColor (defaultBackColor);
+            btnDec.SetTextColor (Color.White);
             btnHex.SetBackgroundColor (Color.Yellow);
+            btnHex.SetTextColor (Color.Black);
          }
       }
 
