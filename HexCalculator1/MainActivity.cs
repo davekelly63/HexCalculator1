@@ -15,7 +15,7 @@ namespace HexCalculator1
       Hex
    };
 
-   [Activity (Label = "Hex Calculator", MainLauncher = true, Icon = "@mipmap/icon")]
+   [Activity (Label = "Hex Calculator", MainLauncher = true, Icon = "@mipmap/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
    public class MainActivity : Activity
    {
       TextView txtDec = null;
