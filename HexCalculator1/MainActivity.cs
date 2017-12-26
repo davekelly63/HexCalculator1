@@ -119,7 +119,7 @@ namespace HexCalculator1
          if (calculationStack.Count > 0)
          {
             Int64 num = calculationStack.Pop ();
-            Int64 num2 = HexConverter.GetNumericString(txtDec.Text);
+            Int64 num2 = HexConverter.GetNumericString (txtDec.Text);
             txtDec.Text = (num - num2).ToString ("N0");
             txtHex.Text = HexConverter.ConvertDecToHex (txtDec.Text);
             entering = false;
@@ -133,7 +133,7 @@ namespace HexCalculator1
          if (calculationStack.Count > 0)
          {
             Int64 num = calculationStack.Pop ();
-            Int64 num2 = HexConverter.GetNumericString(txtDec.Text);
+            Int64 num2 = HexConverter.GetNumericString (txtDec.Text);
             txtDec.Text = (num + num2).ToString ("N0");
             txtHex.Text = HexConverter.ConvertDecToHex (txtDec.Text);
             entering = false;
@@ -145,7 +145,7 @@ namespace HexCalculator1
       private void BtnEnter_Click (object sender, System.EventArgs e)
       {
          // Add to the stack
-         Int64 num = HexConverter.GetNumericString(txtDec.Text);
+         Int64 num = HexConverter.GetNumericString (txtDec.Text);
          calculationStack.Push (num);
          entering = false;
       }
@@ -157,11 +157,13 @@ namespace HexCalculator1
             if (currentmode == EntryMode.Decimal)
             {
                txtDec.Text = txtDec.Text.Remove (txtDec.Text.Length - 1);
+               txtDec.Text = HexConverter.GetNumericString (txtDec.Text).ToString ("N0");
                txtHex.Text = HexConverter.ConvertDecToHex (txtDec.Text);
             }
             else
             {
                txtHex.Text = txtHex.Text.Remove (txtHex.Text.Length - 1);
+               txtHex.Text = HexConverter.PadHexString (txtHex.Text);
                txtDec.Text = HexConverter.ConvertHexToDec (txtHex.Text);
             }
          }
