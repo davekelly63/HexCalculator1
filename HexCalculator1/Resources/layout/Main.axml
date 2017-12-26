@@ -5,220 +5,178 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-    <GridLayout
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/gridLayout1"
-        android:columnCount="4"
-        android:rowCount="10">
-        <TextView
-            android:text="DKSS Basic Hex Calculator"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textViewTitle"
-            android:layout_columnSpan="4"
-            android:textAlignment="textEnd"
-            android:layout_row="0"
-            android:layout_column="0" />
-        <TextView
-            android:text="Large Text"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textViewDec"
-            android:layout_columnSpan="4"
-            android:textAlignment="textEnd"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:gravity="right"
-            android:layout_width="match_parent"
-            android:layout_marginEnd="20px" />
-        <TextView
-            android:text="Dec"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textViewDecLabel"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:textColor="#80808080" />
-        <TextView
-            android:text="Large Text"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textViewHex"
-            android:layout_columnSpan="4"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:gravity="end"
-            android:layout_width="match_parent"
-            android:layout_marginEnd="20px" />
-        <TextView
-            android:text="Hex"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textViewHexLabel"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:textColor="#80808080" />
-        <TextView
-            android:text=" "
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textViewSpareLine"
-            android:layout_columnSpan="4"
-            android:layout_row="3"
-            android:layout_column="0" />
-        <Button
-            android:text="AC"
-            android:id="@+id/buttonAllClear"
-            android:background="#FFFF8C00"
-            android:textColor="#FF000000"
-            android:layout_row="4"
-            android:layout_column="3" />
-        <Button
-            android:text="Del"
-            android:id="@+id/buttonDel"
-            android:background="#FF808080"
-            android:layout_row="4"
-            android:layout_column="2" />
-        <Button
-            android:text="Dec"
-            android:id="@+id/buttonDec"
-            android:layout_row="4"
-            android:layout_column="0"
-            android:background="#FF000000" />
-        <Button
-            android:text="Hex"
-            android:id="@+id/buttonHex"
-            android:layout_row="4"
-            android:layout_column="1"
-            android:background="#FF000000" />
-        <Button
-            android:text="C"
-            android:id="@+id/buttonC"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="5"
-            android:layout_column="0" />
-        <Button
-            android:text="D"
-            android:id="@+id/buttonD"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="5"
-            android:layout_column="1" />
-        <Button
-            android:text="E"
-            android:id="@+id/buttonE"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="5"
-            android:layout_column="2" />
-        <Button
-            android:text="F"
-            android:id="@+id/buttonF"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="5"
-            android:layout_column="3" />
-        <Button
-            android:text="8"
-            android:id="@+id/button8"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="6"
-            android:layout_column="0" />
-        <Button
-            android:text="9"
-            android:id="@+id/button9"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="6"
-            android:layout_column="1" />
-        <Button
-            android:text="A"
-            android:id="@+id/buttonA"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="6"
-            android:layout_column="2" />
-        <Button
-            android:text="B"
-            android:id="@+id/buttonB"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="6"
-            android:layout_column="3" />
-        <Button
-            android:text="4"
-            android:id="@+id/button4"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="7"
-            android:layout_column="0" />
-        <Button
-            android:text="5"
-            android:id="@+id/button5"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="7"
-            android:layout_column="1" />
-        <Button
-            android:text="6"
-            android:id="@+id/button6"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="7"
-            android:layout_column="2" />
-        <Button
-            android:text="7"
-            android:id="@+id/button7"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="7"
-            android:layout_column="3" />
-        <Button
-            android:text="0"
-            android:id="@+id/button0"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="8"
-            android:layout_column="0" />
-        <Button
-            android:text="1"
-            android:id="@+id/button1"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="8"
-            android:layout_column="1" />
-        <Button
-            android:text="2"
-            android:id="@+id/button2"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="8"
-            android:layout_column="2" />
-        <Button
-            android:text="3"
-            android:id="@+id/button3"
-            android:textColor="#FF000000"
-            android:background="#FFFFFFFF"
-            android:layout_row="8"
-            android:layout_column="3" />
-        <Button
-            android:text="+"
-            android:id="@+id/buttonPlus"
-            android:textColor="#FF000000"
-            android:background="#FF00CED1"
-            android:layout_row="9"
-            android:layout_column="2" />
-        <Button
-            android:text="-"
-            android:id="@+id/buttonMinus"
-            android:textColor="#FF000000"
-            android:background="#FF00CED1"
-            android:layout_row="9"
-            android:layout_column="3" />
-        <Button
-            android:text="Enter"
-            android:id="@+id/buttonEnter"
-            android:textColor="#FF000000"
-            android:background="#FF00BFFF"
-            android:layout_row="9"
-            android:layout_column="0"
-            android:layout_columnSpan="2" />
-    </GridLayout>
+        android:id="@+id/tableLayout1"
+        android:layout_marginLeft="15px">
+        <TableRow>
+            <TextView
+                android:text="DKSS Basic Hex Calculator"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textViewTitle"
+                android:layout_span="4"
+                android:textAlignment="textEnd" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Dec"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textViewDecLabel"
+                android:textColor="#80808080" />
+            <TextView
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textViewDec"
+                android:layout_span="3"
+                android:textAlignment="textEnd"
+                android:gravity="right"
+                android:layout_width="match_parent" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Hex"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textViewHexLabel"
+                android:textColor="#80808080" />
+            <TextView
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textViewHex"
+                android:layout_span="3"
+                android:gravity="end"
+                android:layout_width="match_parent" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text=" "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textViewSpareLine" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:text="Dec"
+                android:id="@+id/buttonDec"
+                android:background="#FF000000" />
+            <Button
+                android:text="Hex"
+                android:id="@+id/buttonHex"
+                android:background="#FF000000" />
+            <Button
+                android:text="Del"
+                android:id="@+id/buttonDel"
+                android:background="#FF808080" />
+            <Button
+                android:text="AC"
+                android:id="@+id/buttonAllClear"
+                android:background="#FFFF8C00"
+                android:textColor="#FF000000" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:text="C"
+                android:id="@+id/buttonC"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+            <Button
+                android:text="D"
+                android:id="@+id/buttonD"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+            <Button
+                android:text="E"
+                android:id="@+id/buttonE"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+            <Button
+                android:text="F"
+                android:id="@+id/buttonF"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:text="8"
+                android:id="@+id/button8"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+            <Button
+                android:text="9"
+                android:id="@+id/button9"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+            <Button
+                android:text="A"
+                android:id="@+id/buttonA"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+            <Button
+                android:text="B"
+                android:id="@+id/buttonB"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:text="4"
+                android:id="@+id/button4"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+            <Button
+                android:text="5"
+                android:id="@+id/button5"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+            <Button
+                android:text="6"
+                android:id="@+id/button6"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+            <Button
+                android:text="7"
+                android:id="@+id/button7"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:text="0"
+                android:id="@+id/button0"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+            <Button
+                android:text="1"
+                android:id="@+id/button1"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+            <Button
+                android:text="2"
+                android:id="@+id/button2"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+            <Button
+                android:text="3"
+                android:id="@+id/button3"
+                android:textColor="#FF000000"
+                android:background="#FFFFFFFF" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:text="Enter"
+                android:id="@+id/buttonEnter"
+                android:textColor="#FF000000"
+                android:background="#FF00BFFF"
+                android:layout_span="2" />
+            <Button
+                android:text="+"
+                android:id="@+id/buttonPlus"
+                android:textColor="#FF000000"
+                android:background="#FF00CED1" />
+            <Button
+                android:text="-"
+                android:id="@+id/buttonMinus"
+                android:textColor="#FF000000"
+                android:background="#FF00CED1" />
+        </TableRow>
+    </TableLayout>
 </LinearLayout>
