@@ -110,6 +110,8 @@ namespace HexCalculator1
          btnHex.SetTextColor (Color.White);
 
          defaultBackColor = btnHex.DrawingCacheBackgroundColor;
+
+         txtDec.SetTextColor (Color.Yellow);
       }
 
       private void BtnMinus_Click (object sender, System.EventArgs e)
@@ -187,6 +189,8 @@ namespace HexCalculator1
             btnDec.SetTextColor (Color.Black);
             btnHex.SetBackgroundColor (defaultBackColor);
             btnHex.SetTextColor (Color.White);
+            txtDec.SetTextColor (Color.Yellow);
+            txtHex.SetTextColor (Color.White);
          }
          else
          {
@@ -195,6 +199,8 @@ namespace HexCalculator1
             btnDec.SetTextColor (Color.White);
             btnHex.SetBackgroundColor (Color.Yellow);
             btnHex.SetTextColor (Color.Black);
+            txtDec.SetTextColor (Color.White);
+            txtHex.SetTextColor (Color.Yellow);
          }
       }
 
