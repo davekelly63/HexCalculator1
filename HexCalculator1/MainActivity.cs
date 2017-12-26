@@ -211,6 +211,15 @@ namespace HexCalculator1
          Button button = (Button)sender;
          string pressed = button.Text;
 
+         if (currentmode == EntryMode.Decimal)
+         {
+            // Make sure when if a hex digit is pressed first, it doesn't clear the display
+            if ("0123456789".Contains(pressed) == false)
+            {
+               return;
+            }
+         }
+
          if (entering == false)
          {
             // First character, clear display

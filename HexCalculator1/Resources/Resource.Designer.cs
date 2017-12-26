@@ -77,8 +77,8 @@ namespace HexCalculator1
 			// aapt resource value: 0x7f050011
 			public const int buttonA = 2131034129;
 			
-			// aapt resource value: 0x7f050007
-			public const int buttonAllClear = 2131034119;
+			// aapt resource value: 0x7f05000a
+			public const int buttonAllClear = 2131034122;
 			
 			// aapt resource value: 0x7f050012
 			public const int buttonB = 2131034130;
@@ -89,44 +89,44 @@ namespace HexCalculator1
 			// aapt resource value: 0x7f05000c
 			public const int buttonD = 2131034124;
 			
-			// aapt resource value: 0x7f050009
-			public const int buttonDec = 2131034121;
+			// aapt resource value: 0x7f050007
+			public const int buttonDec = 2131034119;
 			
-			// aapt resource value: 0x7f050008
-			public const int buttonDel = 2131034120;
+			// aapt resource value: 0x7f050009
+			public const int buttonDel = 2131034121;
 			
 			// aapt resource value: 0x7f05000d
 			public const int buttonE = 2131034125;
 			
-			// aapt resource value: 0x7f05001d
-			public const int buttonEnter = 2131034141;
+			// aapt resource value: 0x7f05001b
+			public const int buttonEnter = 2131034139;
 			
 			// aapt resource value: 0x7f05000e
 			public const int buttonF = 2131034126;
 			
-			// aapt resource value: 0x7f05000a
-			public const int buttonHex = 2131034122;
+			// aapt resource value: 0x7f050008
+			public const int buttonHex = 2131034120;
+			
+			// aapt resource value: 0x7f05001d
+			public const int buttonMinus = 2131034141;
 			
 			// aapt resource value: 0x7f05001c
-			public const int buttonMinus = 2131034140;
-			
-			// aapt resource value: 0x7f05001b
-			public const int buttonPlus = 2131034139;
+			public const int buttonPlus = 2131034140;
 			
 			// aapt resource value: 0x7f050000
-			public const int gridLayout1 = 2131034112;
-			
-			// aapt resource value: 0x7f050002
-			public const int textViewDec = 2131034114;
+			public const int tableLayout1 = 2131034112;
 			
 			// aapt resource value: 0x7f050003
-			public const int textViewDecLabel = 2131034115;
+			public const int textViewDec = 2131034115;
 			
-			// aapt resource value: 0x7f050004
-			public const int textViewHex = 2131034116;
+			// aapt resource value: 0x7f050002
+			public const int textViewDecLabel = 2131034114;
 			
 			// aapt resource value: 0x7f050005
-			public const int textViewHexLabel = 2131034117;
+			public const int textViewHex = 2131034117;
+			
+			// aapt resource value: 0x7f050004
+			public const int textViewHexLabel = 2131034116;
 			
 			// aapt resource value: 0x7f050006
 			public const int textViewSpareLine = 2131034118;
