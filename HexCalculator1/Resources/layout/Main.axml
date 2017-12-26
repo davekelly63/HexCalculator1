@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:id="@+id/gridLayout1"
         android:columnCount="5"
-        android:rowCount="9">
+        android:rowCount="10">
         <TextView
             android:text="DKSS Hex Calculator"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -58,12 +58,14 @@
             android:text="Dec"
             android:id="@+id/buttonDec"
             android:layout_row="4"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:background="#FF000000" />
         <Button
             android:text="Hex"
             android:id="@+id/buttonHex"
             android:layout_row="4"
-            android:layout_column="1" />
+            android:layout_column="1"
+            android:background="#FF000000" />
         <Button
             android:text="C"
             android:id="@+id/buttonC"
@@ -176,5 +178,27 @@
             android:background="#FFFFFFFF"
             android:layout_row="8"
             android:layout_column="3" />
+        <Button
+            android:text="+"
+            android:id="@+id/buttonPlus"
+            android:textColor="#FF000000"
+            android:background="#FF00CED1"
+            android:layout_row="9"
+            android:layout_column="2" />
+        <Button
+            android:text="-"
+            android:id="@+id/buttonMinus"
+            android:textColor="#FF000000"
+            android:background="#FF00CED1"
+            android:layout_row="9"
+            android:layout_column="3" />
+        <Button
+            android:text="Enter"
+            android:id="@+id/buttonEnter"
+            android:textColor="#FF000000"
+            android:background="#FF00BFFF"
+            android:layout_columnSpan="2"
+            android:layout_row="9"
+            android:layout_column="0" />
     </GridLayout>
 </LinearLayout>

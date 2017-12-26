@@ -98,11 +98,20 @@ namespace HexCalculator1
 			// aapt resource value: 0x7f05000b
 			public const int buttonE = 2131034123;
 			
+			// aapt resource value: 0x7f05001b
+			public const int buttonEnter = 2131034139;
+			
 			// aapt resource value: 0x7f05000c
 			public const int buttonF = 2131034124;
 			
 			// aapt resource value: 0x7f050008
 			public const int buttonHex = 2131034120;
+			
+			// aapt resource value: 0x7f05001a
+			public const int buttonMinus = 2131034138;
+			
+			// aapt resource value: 0x7f050019
+			public const int buttonPlus = 2131034137;
 			
 			// aapt resource value: 0x7f050000
 			public const int gridLayout1 = 2131034112;

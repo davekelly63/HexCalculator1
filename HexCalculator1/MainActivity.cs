@@ -3,6 +3,9 @@ using Android.Widget;
 using Android.OS;
 using Android.Views;
 using Android.Graphics;
+using System.Collections;
+using System.Collections.Generic;
+using System;
 
 namespace HexCalculator1
 {
@@ -23,7 +26,11 @@ namespace HexCalculator1
 
       EntryMode currentmode = EntryMode.Decimal;
 
+      bool entering = false;
+
       Color defaultBackColor = Color.Black;
+
+      Stack<Int64> calculationStack = new Stack<Int64> ();
 
       protected override void OnCreate (Bundle savedInstanceState)
       {
@@ -82,6 +89,15 @@ namespace HexCalculator1
          Button btnDel = FindViewById<Button> (Resource.Id.buttonDel);
          btnDel.Click += BtnDel_Click;
 
+         Button btnEnter = FindViewById<Button> (Resource.Id.buttonEnter);
+         btnEnter.Click += BtnEnter_Click;
+
+         Button btnPlus = FindViewById<Button> (Resource.Id.buttonPlus);
+         btnPlus.Click += BtnPlus_Click;
+
+         Button btnMinus = FindViewById<Button> (Resource.Id.buttonMinus);
+         btnMinus.Click += BtnMinus_Click;
+
          txtDec = FindViewById<TextView> (Resource.Id.textViewDec);
          txtHex = FindViewById<TextView> (Resource.Id.textViewHex);
 
@@ -94,6 +110,45 @@ namespace HexCalculator1
          btnHex.SetTextColor (Color.White);
 
          defaultBackColor = btnHex.DrawingCacheBackgroundColor;
+      }
+
+      private void BtnMinus_Click (object sender, System.EventArgs e)
+      {
+         if (calculationStack.Count > 0)
+         {
+            Int64 num = calculationStack.Pop ();
+            Int64 num2 = 0;
+            Int64.TryParse (txtDec.Text, out num2);
+            txtDec.Text = (num - num2).ToString ();
+            txtHex.Text = HexConverter.ConvertDecToHex (txtDec.Text);
+            entering = false;
+
+            calculationStack.Push (num - num2);
+         }
+      }
+
+      private void BtnPlus_Click (object sender, System.EventArgs e)
+      {
+         if (calculationStack.Count > 0)
+         {
+            Int64 num = calculationStack.Pop ();
+            Int64 num2 = 0;
+            Int64.TryParse (txtDec.Text, out num2);
+            txtDec.Text = (num + num2).ToString ();
+            txtHex.Text = HexConverter.ConvertDecToHex (txtDec.Text);
+            entering = false;
+
+            calculationStack.Push (num + num2);
+         }
+      }
+
+      private void BtnEnter_Click (object sender, System.EventArgs e)
+      {
+         // Add to the stack
+         Int64 num = 0;
+         Int64.TryParse (txtDec.Text, out num);
+         calculationStack.Push (num);
+         entering = false;
       }
 
       private void BtnDel_Click (object sender, System.EventArgs e)
@@ -114,6 +169,8 @@ namespace HexCalculator1
       {
          txtDec.Text = "0";
          txtHex.Text = "0";
+         calculationStack = new Stack<long> ();
+         entering = false;
       }
 
       private void ChangeModeOnClick (object sender, System.EventArgs e)
@@ -146,6 +203,16 @@ namespace HexCalculator1
          Button button = (Button)sender;
          string pressed = button.Text;
 
+         if (entering == false)
+         {
+            // First character, clear display
+
+            txtDec.Text = "";
+            txtHex.Text = "";
+         }
+
+         entering = true;
+
          if (currentmode == EntryMode.Decimal)
          {
             // Only accept 0-9
@@ -162,12 +229,7 @@ namespace HexCalculator1
             txtHex.Text += pressed;
             txtDec.Text = HexConverter.ConvertHexToDec (txtHex.Text);
          }
-
-
       }
-
    }
-
-
 }
 
