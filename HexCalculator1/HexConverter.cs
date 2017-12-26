@@ -20,7 +20,40 @@ namespace HexCalculator1
 
          UInt64.TryParse (input, out value);
 
-         return value.ToString ("X");
+         string hexString = value.ToString ("X");
+
+         // Now add spaces every 4th character
+
+         string newHex = "";
+         int length = hexString.Length;
+         int charPointer = hexString.Length - 1;
+         int breakCounter = 0;
+
+         while (charPointer >= 0)
+         {
+            newHex = hexString [charPointer] + newHex;
+            charPointer--;
+            breakCounter++;
+
+            if (breakCounter >= 4)
+            {
+               newHex = " " + newHex;
+               breakCounter = 0;
+            }
+         }
+
+         if (hexString.Length % 4 > 0)
+         {
+            int numPadding = 4 - hexString.Length % 4;
+
+            while (numPadding > 0)
+            {
+               newHex = "0" + newHex;
+               numPadding--;
+            }
+         }
+
+         return newHex;
       }
 
       public static string ConvertHexToDec (string input)
