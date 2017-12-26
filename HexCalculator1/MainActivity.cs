@@ -12,7 +12,7 @@ namespace HexCalculator1
       Hex
    };
 
-   [Activity (Label = "HexCalculator", MainLauncher = true, Icon = "@mipmap/icon")]
+   [Activity (Label = "Hex Calculator", MainLauncher = true, Icon = "@mipmap/icon")]
    public class MainActivity : Activity
    {
       TextView txtDec = null;
