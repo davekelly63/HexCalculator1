@@ -119,9 +119,8 @@ namespace HexCalculator1
          if (calculationStack.Count > 0)
          {
             Int64 num = calculationStack.Pop ();
-            Int64 num2 = 0;
-            Int64.TryParse (txtDec.Text, out num2);
-            txtDec.Text = (num - num2).ToString ();
+            Int64 num2 = HexConverter.GetNumericString(txtDec.Text);
+            txtDec.Text = (num - num2).ToString ("N0");
             txtHex.Text = HexConverter.ConvertDecToHex (txtDec.Text);
             entering = false;
 
@@ -134,9 +133,8 @@ namespace HexCalculator1
          if (calculationStack.Count > 0)
          {
             Int64 num = calculationStack.Pop ();
-            Int64 num2 = 0;
-            Int64.TryParse (txtDec.Text, out num2);
-            txtDec.Text = (num + num2).ToString ();
+            Int64 num2 = HexConverter.GetNumericString(txtDec.Text);
+            txtDec.Text = (num + num2).ToString ("N0");
             txtHex.Text = HexConverter.ConvertDecToHex (txtDec.Text);
             entering = false;
 
@@ -147,8 +145,7 @@ namespace HexCalculator1
       private void BtnEnter_Click (object sender, System.EventArgs e)
       {
          // Add to the stack
-         Int64 num = 0;
-         Int64.TryParse (txtDec.Text, out num);
+         Int64 num = HexConverter.GetNumericString(txtDec.Text);
          calculationStack.Push (num);
          entering = false;
       }
@@ -229,6 +226,7 @@ namespace HexCalculator1
             if ("0123456789".Contains (pressed))
             {
                txtDec.Text += pressed;
+               txtDec.Text = HexConverter.FormatNumericString (txtDec.Text);
                txtHex.Text = HexConverter.ConvertDecToHex (txtDec.Text);
             }
          }

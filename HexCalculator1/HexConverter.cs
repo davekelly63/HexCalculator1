@@ -16,9 +16,7 @@ namespace HexCalculator1
    {
       public static string ConvertDecToHex (string input)
       {
-         UInt64 value = 0;
-
-         UInt64.TryParse (input, out value);
+         Int64 value = GetNumericString(input);
 
          string hexString = value.ToString ("X");
 
@@ -50,7 +48,7 @@ namespace HexCalculator1
       {
          string hexString = "";
 
-         while (input [0] == '0')
+         while ((input [0] == '0') && (input.Length > 1))
          {
             input = input.Remove (0, 1);
          }
@@ -95,6 +93,33 @@ namespace HexCalculator1
          }
 
          return newHex;
+      }
+
+      public static string FormatNumericString (string input)
+      {
+         // Remove existing commas first
+
+         Int64 num = GetNumericString (input);
+
+         return num.ToString ("N0");
+      }
+
+      public static Int64 GetNumericString(string number)
+      {
+         string newDecimal = "";
+
+         foreach (char c in number)
+         {
+            if (c != ',')
+            {
+               newDecimal += c;
+            }
+         }
+
+         Int64 num = 0;
+         Int64.TryParse (newDecimal, out num);
+
+         return num;
       }
    }
 }
