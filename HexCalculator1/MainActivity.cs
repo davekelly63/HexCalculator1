@@ -155,15 +155,18 @@ namespace HexCalculator1
 
       private void BtnDel_Click (object sender, System.EventArgs e)
       {
-         if (currentmode == EntryMode.Decimal)
+         if (entering == true)
          {
-            txtDec.Text = txtDec.Text.Remove (txtDec.Text.Length - 1);
-            txtHex.Text = HexConverter.ConvertDecToHex (txtDec.Text);
-         }
-         else
-         {
-            txtHex.Text = txtHex.Text.Remove (txtHex.Text.Length - 1);
-            txtDec.Text = HexConverter.ConvertHexToDec (txtHex.Text);
+            if (currentmode == EntryMode.Decimal)
+            {
+               txtDec.Text = txtDec.Text.Remove (txtDec.Text.Length - 1);
+               txtHex.Text = HexConverter.ConvertDecToHex (txtDec.Text);
+            }
+            else
+            {
+               txtHex.Text = txtHex.Text.Remove (txtHex.Text.Length - 1);
+               txtDec.Text = HexConverter.ConvertHexToDec (txtHex.Text);
+            }
          }
       }
 
@@ -233,6 +236,7 @@ namespace HexCalculator1
          {
             // Hex mode, everything goes
             txtHex.Text += pressed;
+            txtHex.Text = HexConverter.PadHexString (txtHex.Text);
             txtDec.Text = HexConverter.ConvertHexToDec (txtHex.Text);
          }
       }

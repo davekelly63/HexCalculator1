@@ -24,6 +24,47 @@ namespace HexCalculator1
 
          // Now add spaces every 4th character
 
+         string newHex = PadHexString (hexString);
+ 
+         return newHex;
+      }
+
+      public static string ConvertHexToDec (string input)
+      {
+         // Remove any spaces first
+         string hexString = "";
+         foreach(char c in input)
+         {
+            if (c != ' ')
+            {
+               hexString += c;
+            }
+         }
+
+         Int64 value = Convert.ToInt64 (hexString, 16);
+
+         return value.ToString ();
+      }
+
+      public static string PadHexString (string input)
+      {
+         string hexString = "";
+
+         while (input [0] == '0')
+         {
+            input = input.Remove (0, 1);
+         }
+
+         foreach(char c in input)
+         {
+            if (c != ' ')
+            {
+               hexString += c;
+            }
+         }
+
+         // Now reinsert the spaces;
+
          string newHex = "";
          int length = hexString.Length;
          int charPointer = hexString.Length - 1;
@@ -54,13 +95,6 @@ namespace HexCalculator1
          }
 
          return newHex;
-      }
-
-      public static string ConvertHexToDec (string input)
-      {
-         Int64 value = Convert.ToInt64 (input, 16);
-
-         return value.ToString ();
       }
    }
 }
