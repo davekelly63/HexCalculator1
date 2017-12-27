@@ -72,6 +72,24 @@
                 android:background="#FFFF8C00"
                 android:textColor="#FF000000" />
         </TableRow>
+      <TableRow>
+        <Button
+            android:text="Enter"
+            android:id="@+id/buttonEnter"
+            android:textColor="#FF000000"
+            android:background="#FF00BFFF"
+            android:layout_span="2" />
+        <Button
+            android:text="+"
+            android:id="@+id/buttonPlus"
+            android:textColor="#FF000000"
+            android:background="#FF00CED1" />
+        <Button
+            android:text="-"
+            android:id="@+id/buttonMinus"
+            android:textColor="#FF000000"
+            android:background="#FF00CED1" />
+      </TableRow>
         <TableRow>
             <Button
                 android:text="C"
@@ -159,24 +177,6 @@
                 android:id="@+id/button3"
                 android:textColor="#FF000000"
                 android:background="#FFFFFFFF" />
-        </TableRow>
-        <TableRow>
-            <Button
-                android:text="Enter"
-                android:id="@+id/buttonEnter"
-                android:textColor="#FF000000"
-                android:background="#FF00BFFF"
-                android:layout_span="2" />
-            <Button
-                android:text="+"
-                android:id="@+id/buttonPlus"
-                android:textColor="#FF000000"
-                android:background="#FF00CED1" />
-            <Button
-                android:text="-"
-                android:id="@+id/buttonMinus"
-                android:textColor="#FF000000"
-                android:background="#FF00CED1" />
         </TableRow>
     </TableLayout>
 </LinearLayout>
